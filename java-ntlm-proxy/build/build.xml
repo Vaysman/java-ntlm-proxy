@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+
+<project name="CorporateBrands" default="all">
+
+
+	<target name="prereq" unless="skip.prereq">
+		<ant antfile="NTLMProxy.xml" target="${build.target}"/> 
+
+	</target>
+	<target name="dist" depends="prereq">
+		<!-- subprojects in order of dependency -->
+		<ant antfile="NTLMProxyApp.xml" target="${build.target}"/>	
+	</target>
+
+	<target name="all">
+		<property name="build.target" value="dist" />
+		<antcall target="dist" />
+	</target>
+
+	<target name="clean">
+		<property name="build.target" value="clean" />
+		<antcall target="all" />
+
+		<!-- just to be safe -->
+		<delete dir="dist" />
+		<delete dir="work" />
+		<delete dir="tmp" />
+		<delete dir="app" />
+	</target>
+
+	<target name="dist-full">
+		<property name="build.target" value="dist-full" />
+		<antcall target="all" />
+	</target>
+
+	<target name="clean-apps">
+		<delete dir="app" />
+		<delete dir="tmp" />
+	</target>
+
+	<target name="upload-client">
+		<property name="build.target" value="dist" />
+		<ant antfile="BulkUploadClient.xml" target="${build.target}" />	
+		<ant antfile="BulkUploadClient-Standalone.xml" target="${build.target}" />	
+	</target>
+
+
+</project>
+
