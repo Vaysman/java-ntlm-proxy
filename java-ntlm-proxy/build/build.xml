@@ -38,12 +38,19 @@
 		<delete dir="tmp" />
 	</target>
 
-	<target name="upload-client">
-		<property name="build.target" value="dist" />
-		<ant antfile="BulkUploadClient.xml" target="${build.target}" />	
-		<ant antfile="BulkUploadClient-Standalone.xml" target="${build.target}" />	
-	</target>
 
-
+	<target name="release">
+		<move file="app/NTLMProxyApp.prod.jar" tofile="app/NTLMProxy.jar"/>
+		<copy file="../NTLMProxy/ntlm-proxy.properties" todir="app"/>
+		<zip basedir="app" destfile="NTLMProxy-${release.version}.zip"
+			includes="NTLMProxy.jar,ntlm-proxy.properties"/>
+	</target>						
+	<target name="ftp">
+		<ftp server="upload.sf.net" remotedir="incoming" userid="anonymous" password="" >
+			<fileset dir=".">
+				<include name="NTLMProxy-${release.version}.zip"/>
+			</fileset>
+		</ftp>
+	</target>						
 </project>
 
