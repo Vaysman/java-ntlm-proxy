@@ -4421,3 +4421,21 @@
 2007-01-19 22:55:19,671 WARN  [pool-1-thread-2] impl.SLF4JLog {SLF4JLog.java:139} - Cookie rejected: "$Version=0; v1st=B5F584658B026D7F; $Path=/; $Domain=.bangbrosnetwork.com". Illegal domain attribute ".bangbrosnetwork.com". Domain of origin: "bangbrosnetwork.com"
 2007-01-19 22:55:43,532 WARN  [pool-1-thread-1] impl.SLF4JLog {SLF4JLog.java:139} - Cookie rejected: "$Version=0; $$=; $Path=/". Cookie name may not start with $
 2007-01-19 22:57:14,849 WARN  [pool-1-thread-5] impl.SLF4JLog {SLF4JLog.java:139} - Cookie rejected: "$Version=0; $$=; $Path=/". Cookie name may not start with $
+2007-02-05 14:37:37,617 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 14:37:37,704 ERROR [main] ntlmproxy.Main {Main.java:115} - 
+2007-02-05 14:38:08,418 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 14:38:08,497 ERROR [main] ntlmproxy.Main {Main.java:115} - 
+2007-02-05 14:39:47,866 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 14:39:47,944 ERROR [main] ntlmproxy.Main {Main.java:115} - 
+2007-02-05 14:40:45,072 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 14:41:03,240 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 14:41:03,245 WARN  [main] ntlmproxy.Main {Main.java:79} - Use JRE 6.0 for console passwords.
+2007-02-05 14:41:09,544 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 14:41:09,549 WARN  [main] ntlmproxy.Main {Main.java:79} - Use JRE 6.0 for console passwords.
+2007-02-05 15:21:29,343 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 15:25:45,463 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 15:27:52,569 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 15:28:11,843 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 15:28:30,720 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
+2007-02-05 15:28:30,726 ERROR [main] ntlmproxy.Main {Main.java:116} - Use Java 1.6 for console passwords.
+2007-02-05 15:28:47,890 INFO  [main] ntlmproxy.Main {Main.java:58} - Starting NTLM proxy
