@@ -4,12 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Enumeration;
 import java.util.Properties;
+import java.util.logging.LogManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Priority;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -58,20 +56,21 @@ public class Main {
 			Properties props = new Properties();
 			props.load(new FileInputStream(PROPS_FILE));
 
-			if (props.getProperty(Main.PROXY_LOG_DISABLE, "false").equals(
-					"true"))
-			{
-				//org.apache.log4j.Logger.getRootLogger().setLevel(Level.OFF);
-				for (Enumeration e = LogManager.getCurrentLoggers();e.hasMoreElements();)
-					((org.apache.log4j.Logger)e.nextElement()).setLevel(Level.OFF);
-			}
-			else
-				System.out.println("Logging to ntlm-proxy.log");
-			if (props.getProperty(Main.PROXY_LOG_WIRE, "false").equals("true")) {
-				org.apache.log4j.Logger wire = org.apache.log4j.Logger
-						.getLogger("httpclient.wire");
-				wire.setLevel(Level.DEBUG);
-			}
+// TODO find better way
+//			if (props.getProperty(Main.PROXY_LOG_DISABLE, "false").equals(
+//					"true"))
+//			{
+//				//org.apache.log4j.Logger.getRootLogger().setLevel(Level.OFF);
+//				for (Enumeration e = LogManager.getCurrentLoggers();e.hasMoreElements();)
+//					((org.apache.log4j.Logger)e.nextElement()).setLevel(Level.OFF);
+//			}
+//			else
+//				System.out.println("Logging to ntlm-proxy.log");
+//			if (props.getProperty(Main.PROXY_LOG_WIRE, "false").equals("true")) {
+//				org.apache.log4j.Logger wire = org.apache.log4j.Logger
+//						.getLogger("httpclient.wire");
+//				wire.setLevel(Level.DEBUG);
+//			}
 			
 			if (!props.containsKey(Main.PROXY_DELEGATE_PASSWORD))
 				Credentials.getCredentials(props);
